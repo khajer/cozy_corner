@@ -8,8 +8,11 @@ export class MainScene extends Phaser.Scene {
     }
 
     preload() {
-        // Load assets here
+        // Load assets here        
         this.txtLoading = this.add.text(0, 0, 'loading', { font: '48px Arial' });
+
+        this.load.image('background', './assets/background.png');
+
         connectPhantomWallet();
     }
 
@@ -20,7 +23,7 @@ export class MainScene extends Phaser.Scene {
         //     .on('pointerdown', () => {
         //         connectPhantomWallet();
         //     });
-
+        this.add.image(400, 300, 'background').setScale(1);
         const disconnectWalletButton = this.add.text(100, 150, 'Disconnect Phantom Wallet', { font: '24px Arial', color: '#ffffff' })
             .setInteractive()
             .on('pointerdown', () => {
