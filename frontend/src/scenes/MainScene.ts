@@ -11,7 +11,7 @@ export class MainScene extends Phaser.Scene {
         // Load assets here        
         this.txtLoading = this.add.text(0, 0, 'loading', { font: '48px Arial' });
 
-        this.load.image('background', './assets/background.png');
+        this.load.image('background', 'assets/background.png');
 
         connectPhantomWallet();
     }
